@@ -1,7 +1,7 @@
 <!--登录页-->
 <template>
   <div class="Login">
-    <h1 class="txtC">登录</h1>
+    <h1 class="txtC">移动端UI组件</h1>
     <!-- 居中 -->
     <van-cell-group>
       <van-field v-model="username" label="用户名" icon="question"

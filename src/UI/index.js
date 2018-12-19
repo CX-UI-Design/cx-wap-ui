@@ -3,12 +3,12 @@ import Vant from 'vant';
 
 /*============ Global （ do not to change ）============**/
 import UIExtends from '@_core/basic/ui-extends';
-import 'vant/lib/index.less';
+import 'vant/lib/index.css';
 import '@_ui_cover';
 import '@_ui_public';
 /*======================================================**/
-
 import '../assets/css/index.scss';//modeules and biz comannd style set
+
 import {Lazyload} from 'vant';
 import DrawerLayout from 'vue-drawer-layout'
 
