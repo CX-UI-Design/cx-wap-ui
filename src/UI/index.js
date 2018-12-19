@@ -22,8 +22,27 @@ Vue.use(Lazyload, {
   listenEvents: ['scroll'],
   lazyComponent: true
 });
-
 Vue.use(Vant, DrawerLayout);
+
+
+import CXWAPUI from '../../lib/index';
+
+Vue.use(CXWAPUI, {
+  prefix: 'ns-',//stage name
+  log: false,//show log information
+  type: 'globle',
+  a:1
+});
+
+
+import {Button} from '../../lib/index';
+
+Vue.use(Button, {
+  prefix: 'ns-',//stage name
+  log: false,//show log information
+  type: 'local'
+});
+
 
 const UI_NAME = 'ns_';
 Vue.use(UIExtends, {name: UI_NAME});

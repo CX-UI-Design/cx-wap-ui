@@ -3,7 +3,6 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path');
-const frameState = require('./frametest/switch');
 
 
 module.exports = {
@@ -54,7 +53,7 @@ module.exports = {
   },
   base: {
     entry: {
-      app: frameState.frameSwitch ? './frametest/main.js' : './src/main.js'
+      app: './src/main.js'
     },
     themeConfig: {
       switch: true,

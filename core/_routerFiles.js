@@ -1,7 +1,4 @@
-var filesSrc = require.context('../src/router/modules', true, /\.js/);
-var filesFra = require.context('../frametest/router/modules', true, /\.js/);
-var frameState = require('../frametest/switch');
-var files = frameState.frameSwitch ? filesFra : filesSrc;
+var files = require.context('../src/router/modules', true, /\.js/);
 var modules = [];
 files.keys().forEach(key => {
   // var mk = key.replace(/(^\.\/|\.js$)/g, '')
