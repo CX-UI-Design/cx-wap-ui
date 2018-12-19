@@ -1,0 +1,74 @@
+@import "Mixin/index";
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, Microsoft YaHei, SimSun, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.indent-2em {
+  text-indent: 2em;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  @include clearFloat;
+}
+
+.txtC {
+  text-align: center !important;
+}
+
+.txtL {
+  text-align: left !important;
+}
+
+.txtR {
+  text-align: right !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.oneline-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.not-render {
+  display: none;
+}
+
+.disabled {
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+

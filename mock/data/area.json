@@ -1,0 +1,72 @@
+{
+  "resultCode": 200,
+  "resultData":  [
+    {
+      "text": "紫金苑",
+      "children": [
+        {"text": "一幢", "id": 1, "disabled": true},
+        {"text": "二幢", "id": 2, "disabled": false},
+        {"text": "三幢", "id": 3, "disabled": false},
+        {"text": "四幢", "id": 4, "disabled": false},
+        {"text": "五幢", "id": 5, "disabled": false},
+        {"text": "六幢", "id": 6, "disabled": false},
+        {"text": "七幢", "id": 7, "disabled": false},
+        {"text": "八幢", "id": 8, "disabled": false},
+        {"text": "九幢", "id": 9, "disabled": false},
+        {"text": "十幢", "id": 10, "disabled": false}
+      ]
+    },
+    {
+      "text": "香樟花园",
+      "children": [
+        {"text": "一幢", "id": 1, "disabled": true},
+        {"text": "二幢", "id": 2, "disabled": false},
+        {"text": "三幢", "id": 3, "disabled": true},
+        {"text": "四幢", "id": 4, "disabled": false},
+        {"text": "五幢", "id": 5, "disabled": false},
+        {"text": "六幢", "id": 6, "disabled": true},
+        {"text": "七幢", "id": 7, "disabled": false},
+        {"text": "八幢", "id": 8, "disabled": false}
+      ]
+    },
+    {
+      "text": "紫枫家园",
+      "children": [
+        {"text": "一幢", "id": 1, "disabled": true},
+        {"text": "二幢", "id": 2, "disabled": true},
+        {"text": "三幢", "id": 3, "disabled": false},
+        {"text": "四幢", "id": 4, "disabled": false},
+        {"text": "五幢", "id": 5, "disabled": false},
+        {"text": "六幢", "id": 6, "disabled": true},
+        {"text": "七幢", "id": 7, "disabled": false},
+        {"text": "八幢", "id": 8, "disabled": false},
+        {"text": "九幢", "id": 9, "disabled": false},
+        {"text": "十幢", "id": 10, "disabled": false},
+        {"text": "十一幢", "id": 11, "disabled": false},
+        {"text": "十二幢", "id": 12, "disabled": false}
+      ]
+    },
+    {
+      "text": "亲亲家园",
+      "children": [
+        {"text": "一幢", "id": 1, "disabled": true},
+        {"text": "二幢", "id": 2, "disabled": true},
+        {"text": "三幢", "id": 3, "disabled": false},
+        {"text": "四幢", "id": 4, "disabled": false},
+        {"text": "五幢", "id": 5, "disabled": false},
+        {"text": "六幢", "id": 6, "disabled": false},
+        {"text": "七幢", "id": 7, "disabled": false},
+        {"text": "八幢", "id": 8, "disabled": false},
+        {"text": "九幢", "id": 9, "disabled": false},
+        {"text": "十幢", "id": 10, "disabled": false},
+        {"text": "十一幢", "id": 11, "disabled": false},
+        {"text": "十二幢", "id": 12, "disabled": false},
+        {"text": "十三幢", "id": 13, "disabled": false},
+        {"text": "十四幢", "id": 14, "disabled": false},
+        {"text": "十五幢", "id": 15, "disabled": true},
+        {"text": "十六幢", "id": 16, "disabled": false}
+      ]
+    }
+  ],
+  "resultMsg": "get-测试操作"
+}
