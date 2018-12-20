@@ -1,12 +1,5 @@
-/build/
-/config/
-/dist/
-/src/
-/mock/
-
-/*.js
-/test/unit/coverage/
-
-
-/core/
-/frametest/
+es
+lib
+dist
+build
+node_modules
