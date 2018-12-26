@@ -14,7 +14,7 @@ function buildVantEntry() {
     'Waterfall'
   ];
   //获取 import 导入 模板信息列表
-  const importList = Components.map(name => `import ${uppercamelize(name)} from './packages/${name}/src/index';`);
+  const importList = Components.map(name => `import ${uppercamelize(name)} from './packages/${name}/src/${name}';`);
   //获取 export 导出 模板信息列表
   const exportList = Components.map(name => `${uppercamelize(name)}`);
   //获取 install 挂载 模板信息列表
