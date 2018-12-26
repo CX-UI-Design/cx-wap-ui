@@ -1,4 +1,4 @@
-<!--架构组 - 基础组件调试 - Circle 组件-->
+<!--架构组 - 基础组件调试 - Circle 环形进度条 组件-->
 <template>
   <van-circle class="ns-circle" v-model="child_circle"
               :rate="rate" :size="size" :color="color" :layerColor="layerColor"
