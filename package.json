@@ -24,9 +24,13 @@
     "@babel/preset-env": "^7.2.0",
     "@cx-ui-design-test1/cx-builder-test1": "^0.0.3",
     "@vant/compiler": "^1.0.0",
+    "dependency-tree": "^6.4.0",
+    "fs-extra": "^7.0.1",
     "shelljs": "^0.8.3",
     "signale": "^1.3.0",
-    "uppercamelcase": "^3.0.0"
+    "uppercamelcase": "^3.0.0",
+    "vue-template-compiler": "^2.5.21",
+    "vue-template-es2015-compiler": "^1.6.0"
   },
   "engines": {
     "node": ">= 6.0.0",
