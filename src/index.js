@@ -1,15 +1,15 @@
 /* eslint-disable */
 // This file is auto gererated by build/build-entry.js
-  
+
 import * as filters from './filters/index';//filter
 import $Var from './variable';
 import resmount from './utils/resmount';
 import {mergeOptions} from "./utils";
 const version = '1.0.0';
 
-import Button from './packages/Button/src/index';
-import Cell from './packages/Cell/src/index';
-import CellGroup from './packages/Cell-group/src/index';
+import Button from './packages/Button/src/Button';
+import Cell from './packages/Cell/src/Cell';
+import CellGroup from './packages/Cell-group/src/Cell-group';
 
 
 const components = [
