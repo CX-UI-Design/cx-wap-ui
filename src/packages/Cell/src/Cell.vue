@@ -10,7 +10,9 @@
 </template>
 
 <script>
-  export default {
+  import create from '../../../utils/create';
+
+  export default create({
     name: 'cell',
     created() {
     },
@@ -19,7 +21,7 @@
       title: {type: [String, Number]},
       value: {type: [String, Number]},
       label: {type: String},
-      size: {type: String},//large	String
+      size: {type: String},//large
       url: {type: String},
       to: {type: [String, Object]},
       border: {type: Boolean, default: true},
@@ -38,7 +40,7 @@
         this.$emit('click');
       }
     }
-  }
+  })
 
 </script>
 
