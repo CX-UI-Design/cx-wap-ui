@@ -1,4 +1,4 @@
-<!--架构组 - 基础组件调试 - Badge 组件-->
+<!--架构组 - 基础组件调试 - Badge 徽章 组件-->
 <template>
   <van-badge class="ns-badge" :title="title" :info="info" :url="url" @click="badge_click"/>
 </template>

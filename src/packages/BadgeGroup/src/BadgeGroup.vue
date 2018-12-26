@@ -1,4 +1,4 @@
-<!--架构组 - 基础组件调试 - BadgeGroup 组件-->
+<!--架构组 - 基础组件调试 - BadgeGroup 按钮组 组件-->
 <template>
   <van-badge-group class="ns-badge-group" :activeKey="activeKey" @change="badgeGroup_change">
     <slot></slot>

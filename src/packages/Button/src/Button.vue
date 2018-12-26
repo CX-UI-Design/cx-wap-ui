@@ -1,4 +1,4 @@
-<!--架构组 - 基础组件调试 - Button 组件-->
+<!--架构组 - 基础组件调试 - Button 按钮 组件-->
 <template>
   <van-button class="ns-button" :type="type" :size="size" :text="text" :tag="tag" :disabled="disabled"
               :loading="loading" :block="block" :plain="plain" :square="square" :round="round"
