@@ -25,6 +25,7 @@ function buildVantEntry() {
   const content = `${tips}
   
 import * as filters from './filters/index';//filter
+import ui_extends from './ui-extends';
 import $Var from './variable';
 import resmount from './utils/resmount';
 import {mergeOptions} from "./utils";
@@ -59,6 +60,8 @@ const install = function (Vue, opts = {}) {
   Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key])
   });
+  
+  ui_extends(Vue, option.prefix);
 };
 
 /* istanbul ignore if */

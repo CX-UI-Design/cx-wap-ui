@@ -10,9 +10,9 @@ const tasks = [
   'lint',
   'build:entry',
   'build:components',
-  'build:style',
-  'build:style-entry',
-  'build:vant'
+  // 'build:style',
+  // 'build:style-entry',
+  // 'build:vant'
 ];
 
 tasks.forEach(task => {
