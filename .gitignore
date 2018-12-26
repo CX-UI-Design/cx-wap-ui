@@ -1,13 +1,25 @@
-.DS_Store
+##############################
+## Folders                  ##
+##############################
 node_modules/
 dist/
+lib/
+es/
+.idea/
+
+
+##############################
+## files                  ##
+##############################
+
+frametest/switch.js
+
+.DS_Store
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.idea/
-.idea
-/.idea/
-frametest/switch.js
+
+
 
 # Editor directories and files
 .idea
@@ -15,8 +27,6 @@ frametest/switch.js
 *.ntvs*
 *.njsproj
 *.sln
-
 /.vscode/
 /.settings/
-
 /.project
