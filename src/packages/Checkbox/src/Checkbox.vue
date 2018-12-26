@@ -15,7 +15,6 @@
     data() {
       return {
         child_checkbox: '',
-        vModel: false//Boolean
       }
     },
     created() {
