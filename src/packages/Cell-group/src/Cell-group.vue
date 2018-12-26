@@ -6,14 +6,16 @@
 </template>
 
 <script>
-  export default {
+  import create from '../../../utils/create';
+
+  export default create({
     name: 'cell-group',
     created() {
     },
     props: {
       border: {type: Boolean, default: true}
     }
-  }
+  })
 
 </script>
 <style rel="stylesheet/scss" lang="less">
