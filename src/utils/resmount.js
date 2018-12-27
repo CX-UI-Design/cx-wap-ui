@@ -11,7 +11,7 @@ import {camelize, prefixName} from '.';
  */
 export default (vue, component, opts, isglobal = true) => {
   let {name} = component;
-  name = prefixName(name, opts.prefix, $Var._defprefix);
+  name = prefixName(name, opts, $Var);
   vue.component(name, component);
   if (!isglobal) {
     vue.component((camelize(`-${name}`)), component);
