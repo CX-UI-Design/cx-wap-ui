@@ -9,7 +9,7 @@
   </van-loading>
 </template>
 
-<script>
+<script>6
   import create from '../../../utils/create';
 
   export default create({

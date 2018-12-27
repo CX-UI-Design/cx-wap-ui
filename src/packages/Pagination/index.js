@@ -1,4 +1,4 @@
-import _Pagination from './src/Pagination'
+import _Pagination from './src/index'
 import './src/style/index.scss'
 
 export default _Pagination

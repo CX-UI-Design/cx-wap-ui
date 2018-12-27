@@ -52,7 +52,7 @@
        * 多列：Picker 实例，所有列选中值，当前列对应的索引
        */
       picker_change(Picker) {
-        this.$emit('change', Picker);
+        this.$emit('change', index);
       }
     }
   })
