@@ -13,8 +13,6 @@
   export default create({
     name: 'button',
     created() {
-      console.log(33333333);
-      console.log(this.$opts);
     },
     props: {
       type: {type: String, default: 'default'},//default primary warning danger
