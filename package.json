@@ -10,10 +10,12 @@
     "build:components": "node build/build-components.js --color",
     "build:vant": "cross-env NODE_ENV=production webpack --color --config build/webpack.build.js && cross-env NODE_ENV=production webpack -p --color --config build/webpack.build.js",
     "build:style": "gulp --gulpfile ./build/build-style.js",
-    "build:style-entry": "node build/build-style-entry.js"
+    "build:style-entry": "node build/build-style-entry.js",
+    "build:copy": "gulp --gulpfile ./build/build-copy.js"
   },
   "dependencies": {
-    "@babel/runtime": "^7.2.0"
+    "@babel/runtime": "^7.2.0",
+    "gulp-clean": "^0.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -24,8 +26,11 @@
     "@babel/preset-env": "^7.2.0",
     "@cx-ui-design-test1/cx-builder-test1": "^0.0.3",
     "@vant/compiler": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
     "dependency-tree": "^6.4.0",
     "fs-extra": "^7.0.1",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.2.0",
     "shelljs": "^0.8.3",
     "signale": "^1.3.0",
     "uppercamelcase": "^3.0.0",
