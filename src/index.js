@@ -8,55 +8,55 @@ import resmount from './utils/resmount';
 import {mergeOptions} from "./utils";
 const version = '1.0.0';
 
-import Actionsheet from './packages/Actionsheet/src';
-import Badge from './packages/Badge/src';
-import BadgeGroup from './packages/BadgeGroup/src';
-import Button from './packages/Button/src';
-import Cell from './packages/Cell/src';
-import CellGroup from './packages/Cell-group/src';
-import Checkbox from './packages/Checkbox/src';
-import CheckboxGroup from './packages/CheckboxGroup/src';
-import Circle from './packages/Circle/src';
-import Col from './packages/Col/src';
-import Collapse from './packages/Collapse/src';
-import CollapseItem from './packages/CollapseItem/src';
-import DatetimePicker from './packages/DatetimePicker/src';
-import Dialog from './packages/Dialog/src';
-import Field from './packages/Field/src';
-import Icon from './packages/Icon/src';
-import List from './packages/List/src';
-import Loading from './packages/Loading/src';
-import NavBar from './packages/NavBar/src';
-import NoticeBar from './packages/NoticeBar/src';
-import NumberKeyboard from './packages/NumberKeyboard/src';
-import Pagination from './packages/Pagination/src';
-import Panel from './packages/Panel/src';
-import PasswordInput from './packages/PasswordInput/src';
-import Picker from './packages/Picker/src';
-import Popup from './packages/Popup/src';
-import Progress from './packages/Progress/src';
-import PullRefresh from './packages/PullRefresh/src';
-import Radio from './packages/Radio/src';
-import RadioGroup from './packages/RadioGroup/src';
-import Rate from './packages/Rate/src';
-import Row from './packages/Row/src';
-import Search from './packages/Search/src';
-import Slider from './packages/Slider/src';
-import Step from './packages/Step/src';
-import Stepper from './packages/Stepper/src';
-import Steps from './packages/Steps/src';
-import Swipe from './packages/Swipe/src';
-import SwipeCell from './packages/SwipeCell/src';
-import SwipeItem from './packages/SwipeItem/src';
-import Switch from './packages/Switch/src';
-import SwitchCell from './packages/SwitchCell/src';
-import Tab from './packages/Tab/src';
-import Tabbar from './packages/Tabbar/src';
-import TabbarItem from './packages/TabbarItem/src';
-import Tabs from './packages/Tabs/src';
-import Tag from './packages/Tag/src';
-import TreeSelect from './packages/TreeSelect/src';
-import Uploader from './packages/Uploader/src';
+import Actionsheet from './packages/Actionsheet';
+import Badge from './packages/Badge';
+import BadgeGroup from './packages/BadgeGroup';
+import Button from './packages/Button';
+import Cell from './packages/Cell';
+import CellGroup from './packages/Cell-group';
+import Checkbox from './packages/Checkbox';
+import CheckboxGroup from './packages/CheckboxGroup';
+import Circle from './packages/Circle';
+import Col from './packages/Col';
+import Collapse from './packages/Collapse';
+import CollapseItem from './packages/CollapseItem';
+import DatetimePicker from './packages/DatetimePicker';
+import Dialog from './packages/Dialog';
+import Field from './packages/Field';
+import Icon from './packages/Icon';
+import List from './packages/List';
+import Loading from './packages/Loading';
+import NavBar from './packages/NavBar';
+import NoticeBar from './packages/NoticeBar';
+import NumberKeyboard from './packages/NumberKeyboard';
+import Pagination from './packages/Pagination';
+import Panel from './packages/Panel';
+import PasswordInput from './packages/PasswordInput';
+import Picker from './packages/Picker';
+import Popup from './packages/Popup';
+import Progress from './packages/Progress';
+import PullRefresh from './packages/PullRefresh';
+import Radio from './packages/Radio';
+import RadioGroup from './packages/RadioGroup';
+import Rate from './packages/Rate';
+import Row from './packages/Row';
+import Search from './packages/Search';
+import Slider from './packages/Slider';
+import Step from './packages/Step';
+import Stepper from './packages/Stepper';
+import Steps from './packages/Steps';
+import Swipe from './packages/Swipe';
+import SwipeCell from './packages/SwipeCell';
+import SwipeItem from './packages/SwipeItem';
+import Switch from './packages/Switch';
+import SwitchCell from './packages/SwitchCell';
+import Tab from './packages/Tab';
+import Tabbar from './packages/Tabbar';
+import TabbarItem from './packages/TabbarItem';
+import Tabs from './packages/Tabs';
+import Tag from './packages/Tag';
+import TreeSelect from './packages/TreeSelect';
+import Uploader from './packages/Uploader';
 
 
 const components = [
@@ -113,12 +113,7 @@ const components = [
 
 const install = function (Vue, opts = {}) {
   //Former plug-in external param config
-  const option = mergeOptions({
-    prefix: $Var._defprefix,//stage name config
-    tie:$Var._tie,//tie config
-    lan: $Var._lan,//language config
-    log: $Var._log,//log information show
-  }, opts);
+ const option = mergeOptions($Var, opts);
   Vue.prototype.$opts = option;
   Vue.$opts = option;
   console.log('===== 全局合并后参数：=====', option);
