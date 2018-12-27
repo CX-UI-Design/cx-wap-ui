@@ -73,7 +73,7 @@ function judgeType(value) {
  * @returns {*}
  */
 function prefixName(name, opts, $Var) {
-  const defname = $Var._prefix + $Var._tie;
+  const defname = $Var.prefix + $Var.tie;
   const newname = opts.prefix + opts.tie;
   console.log("原始名称，前缀名，默认前缀名称：", name, defname, newname);
   if (!name) throw ("the component should be set with the initial name，" +
@@ -103,7 +103,7 @@ function mergeOptions(opt1, opt2) {
     if (t === 'null' || t === 'undefined') return false;
     return true;
   };
-  let option = opt1;
+  let option = opt1 || {};
   if (opt2 && Object.keys(opt2).length !== 0) {
     for (const key of Object.keys(opt2)) {
       if (_confValidate(opt2, key)) {
