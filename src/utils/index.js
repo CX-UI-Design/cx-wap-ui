@@ -1,3 +1,5 @@
+import $Var from "../variable";
+
 function isDef(value) {
   return value !== undefined && value !== null;
 }
@@ -66,18 +68,21 @@ function judgeType(value) {
 /**
  * prefix name
  * @param name
- * @param prefix
- * @param def
+ * @param opts
+ * @param $Var
  * @returns {*}
  */
-function prefixName(name, prefix, def) {
-  console.log("原始名称，前缀名，默认前缀名称：", name, prefix, def);
+function prefixName(name, opts, $Var) {
+  const defname = $Var._prefix + $Var._tie;
+  const newname = opts.prefix + opts.tie;
+  console.log("原始名称，前缀名，默认前缀名称：", name, defname, newname);
   if (!name) throw ("the component should be set with the initial name，" +
     "please check every component' name whether it's property is set");
-  if (typeof prefix !== "string" || !prefix) return name;
-  if (name.indexOf(def) === 0) {
-    const reg = new RegExp(def, "g"); //'[ default- ]' => prefix name + connector
-    return name.replace(reg, prefix);
+  if (typeof opts.prefix !== "string" || !opts.prefix) return name;
+  if (typeof opts.tie !== "string" || !opts.tie) return name;
+  if (name.indexOf(defname) === 0) {
+    const reg = new RegExp(defname, "g"); //'[ default- ]' => prefix name + connector
+    return name.replace(reg, newname);
   }
   else {
     return name;
