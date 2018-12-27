@@ -20,7 +20,7 @@ function install(Vue, opts = {}) {
   const option = mergeOptions(Vue.$opts, opts);
   Vue.prototype.$opts = option;
   Vue.$opts = option;
-  console.log('===== 局部合并后参数：=====',option);
+  console.log('===== 局部合并后参数：=====', option);
   console.log(5555555555555);
   console.log(Vue.$opts);
 }
@@ -47,7 +47,7 @@ function defaultProps(props) {
 
 export default function (sfc) {
 
-  sfc.name = $Var._defprefix + sfc.name;
+  sfc.name = $Var._defprefix + $Var._tie + sfc.name;
   sfc.install = sfc.install || install;
   sfc.mixins = sfc.mixins || [];
   sfc.mixins.push(i18n, recls);
