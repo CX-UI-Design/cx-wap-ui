@@ -14,7 +14,7 @@ function buildVantEntry() {
     'Waterfall'
   ];
   //获取 import 导入 模板信息列表
-  const importList = Components.map(name => `import ${uppercamelize(name)} from './packages/${name}/src';`);
+  const importList = Components.map(name => `import ${uppercamelize(name)} from './packages/${name}';`);
   //获取 export 导出 模板信息列表
   const exportList = Components.map(name => `${uppercamelize(name)}`);
   //获取 install 挂载 模板信息列表
@@ -40,12 +40,7 @@ const components = [
 
 const install = function (Vue, opts = {}) {
   //Former plug-in external param config
-  const option = mergeOptions({
-    prefix: $Var._defprefix,//stage name config
-    tie:$Var._tie,//tie config
-    lan: $Var._lan,//language config
-    log: $Var._log,//log information show
-  }, opts);
+ const option = mergeOptions($Var, opts);
   Vue.prototype.$opts = option;
   Vue.$opts = option;
   console.log('===== 全局合并后参数：=====', option);
