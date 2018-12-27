@@ -8,53 +8,59 @@ import resmount from './utils/resmount';
 import {mergeOptions} from "./utils";
 const version = '1.0.0';
 
-import Badge from './packages/Badge/src/Badge';
-import BadgeGroup from './packages/BadgeGroup/src/BadgeGroup';
-import Button from './packages/Button/src/Button';
-import Cell from './packages/Cell/src/Cell';
-import CellGroup from './packages/Cell-group/src/Cell-group';
-import Checkbox from './packages/Checkbox/src/Checkbox';
-import CheckboxGroup from './packages/CheckboxGroup/src/CheckboxGroup';
-import Circle from './packages/Circle/src/Circle';
-import Col from './packages/Col/src/Col';
-import Collapse from './packages/Collapse/src/Collapse';
-import CollapseItem from './packages/CollapseItem/src/CollapseItem';
-import DatetimePicker from './packages/DatetimePicker/src/DatetimePicker';
-import Field from './packages/Field/src/Field';
-import Icon from './packages/Icon/src/Icon';
-import List from './packages/List/src/List';
-import NavBar from './packages/NavBar/src/NavBar';
-import NoticeBar from './packages/NoticeBar/src/NoticeBar';
-import NumberKeyboard from './packages/NumberKeyboard/src/NumberKeyboard';
-import Pagination from './packages/Pagination/src/Pagination';
-import Panel from './packages/Panel/src/Panel';
-import PasswordInput from './packages/PasswordInput/src/PasswordInput';
-import Picker from './packages/Picker/src/Picker';
-import Popup from './packages/Popup/src/Popup';
-import Progress from './packages/Progress/src/Progress';
-import Radio from './packages/Radio/src/Radio';
-import RadioGroup from './packages/RadioGroup/src/RadioGroup';
-import Rate from './packages/Rate/src/Rate';
-import Row from './packages/Row/src/Row';
-import Search from './packages/Search/src/Search';
-import Slider from './packages/Slider/src/Slider';
-import Step from './packages/Step/src/Step';
-import Stepper from './packages/Stepper/src/Stepper';
-import Steps from './packages/Steps/src/Steps';
-import Swipe from './packages/Swipe/src/Swipe';
-import SwipeItem from './packages/SwipeItem/src/SwipeItem';
-import Switch from './packages/Switch/src/Switch';
-import SwitchCell from './packages/SwitchCell/src/SwitchCell';
-import Tab from './packages/Tab/src/Tab';
-import Tabbar from './packages/Tabbar/src/Tabbar';
-import TabbarItem from './packages/TabbarItem/src/TabbarItem';
-import Tabs from './packages/Tabs/src/Tabs';
-import Tag from './packages/Tag/src/Tag';
-import TreeSelect from './packages/TreeSelect/src/TreeSelect';
-import Uploader from './packages/Uploader/src/Uploader';
+import Actionsheet from './packages/Actionsheet/src';
+import Badge from './packages/Badge/src';
+import BadgeGroup from './packages/BadgeGroup/src';
+import Button from './packages/Button/src';
+import Cell from './packages/Cell/src';
+import CellGroup from './packages/Cell-group/src';
+import Checkbox from './packages/Checkbox/src';
+import CheckboxGroup from './packages/CheckboxGroup/src';
+import Circle from './packages/Circle/src';
+import Col from './packages/Col/src';
+import Collapse from './packages/Collapse/src';
+import CollapseItem from './packages/CollapseItem/src';
+import DatetimePicker from './packages/DatetimePicker/src';
+import Dialog from './packages/Dialog/src';
+import Field from './packages/Field/src';
+import Icon from './packages/Icon/src';
+import List from './packages/List/src';
+import Loading from './packages/Loading/src';
+import NavBar from './packages/NavBar/src';
+import NoticeBar from './packages/NoticeBar/src';
+import NumberKeyboard from './packages/NumberKeyboard/src';
+import Pagination from './packages/Pagination/src';
+import Panel from './packages/Panel/src';
+import PasswordInput from './packages/PasswordInput/src';
+import Picker from './packages/Picker/src';
+import Popup from './packages/Popup/src';
+import Progress from './packages/Progress/src';
+import PullRefresh from './packages/PullRefresh/src';
+import Radio from './packages/Radio/src';
+import RadioGroup from './packages/RadioGroup/src';
+import Rate from './packages/Rate/src';
+import Row from './packages/Row/src';
+import Search from './packages/Search/src';
+import Slider from './packages/Slider/src';
+import Step from './packages/Step/src';
+import Stepper from './packages/Stepper/src';
+import Steps from './packages/Steps/src';
+import Swipe from './packages/Swipe/src';
+import SwipeCell from './packages/SwipeCell/src';
+import SwipeItem from './packages/SwipeItem/src';
+import Switch from './packages/Switch/src';
+import SwitchCell from './packages/SwitchCell/src';
+import Tab from './packages/Tab/src';
+import Tabbar from './packages/Tabbar/src';
+import TabbarItem from './packages/TabbarItem/src';
+import Tabs from './packages/Tabs/src';
+import Tag from './packages/Tag/src';
+import TreeSelect from './packages/TreeSelect/src';
+import Uploader from './packages/Uploader/src';
 
 
 const components = [
+  Actionsheet,
   Badge,
   BadgeGroup,
   Button,
@@ -67,9 +73,11 @@ const components = [
   Collapse,
   CollapseItem,
   DatetimePicker,
+  Dialog,
   Field,
   Icon,
   List,
+  Loading,
   NavBar,
   NoticeBar,
   NumberKeyboard,
@@ -79,6 +87,7 @@ const components = [
   Picker,
   Popup,
   Progress,
+  PullRefresh,
   Radio,
   RadioGroup,
   Rate,
@@ -89,6 +98,7 @@ const components = [
   Stepper,
   Steps,
   Swipe,
+  SwipeCell,
   SwipeItem,
   Switch,
   SwitchCell,
@@ -105,6 +115,7 @@ const install = function (Vue, opts = {}) {
   //Former plug-in external param config
   const option = mergeOptions({
     prefix: $Var._defprefix,//stage name config
+    tie:$Var._tie,//tie config
     lan: $Var._lan,//language config
     log: $Var._log,//log information show
   }, opts);
@@ -124,7 +135,7 @@ const install = function (Vue, opts = {}) {
     Vue.filter(key, filters[key])
   });
   
-  ui_extends(Vue, option.prefix);
+  ui_extends(Vue, option);
 };
 
 /* istanbul ignore if */
@@ -135,6 +146,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 export {
   install,
   version,
+  Actionsheet,
   Badge,
   BadgeGroup,
   Button,
@@ -147,9 +159,11 @@ export {
   Collapse,
   CollapseItem,
   DatetimePicker,
+  Dialog,
   Field,
   Icon,
   List,
+  Loading,
   NavBar,
   NoticeBar,
   NumberKeyboard,
@@ -159,6 +173,7 @@ export {
   Picker,
   Popup,
   Progress,
+  PullRefresh,
   Radio,
   RadioGroup,
   Rate,
@@ -169,6 +184,7 @@ export {
   Stepper,
   Steps,
   Swipe,
+  SwipeCell,
   SwipeItem,
   Switch,
   SwitchCell,
