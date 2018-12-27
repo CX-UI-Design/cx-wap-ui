@@ -5,7 +5,9 @@ import $Var from '../variable';
 import recls from './recls';
 import i18n from './i18n';
 import resmount from './resmount';
+import ui_extends from "../ui-extends";
 import {isDef, judgeType, mergeOptions} from '.';
+
 
 /**
  * component install
@@ -17,12 +19,14 @@ function install(Vue, opts = {}) {
   if (judgeType(opts) !== 'object') {
     throw 'Opts should be in object format. Check it'
   }
-  const option = mergeOptions(Vue.$opts, opts);
+  //局部引入组件的时候，Vue.$opts是不存在的，Vue.$opts为全局引入时候的配置参数
+  const option = mergeOptions(Vue.$opts || $Var, opts);
   Vue.prototype.$opts = option;
   Vue.$opts = option;
   console.log('===== 局部合并后参数：=====', option);
-  console.log(5555555555555);
   console.log(Vue.$opts);
+
+  ui_extends(Vue, option, false);
 }
 
 function returnArray() {
@@ -47,7 +51,7 @@ function defaultProps(props) {
 
 export default function (sfc) {
 
-  sfc.name = $Var._defprefix + $Var._tie + sfc.name;
+  sfc.name = $Var.prefix + $Var.tie + sfc.name;
   sfc.install = sfc.install || install;
   sfc.mixins = sfc.mixins || [];
   sfc.mixins.push(i18n, recls);
