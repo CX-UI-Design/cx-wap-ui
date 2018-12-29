@@ -1,0 +1,6 @@
+@import './mixins/ellipsis';
+
+.van-ellipsis {
+  @include ellipsis;
+
+}
