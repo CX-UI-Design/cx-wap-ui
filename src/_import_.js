@@ -3,5 +3,5 @@
  * @param file
  * @returns {function(): (Promise<*>|*)}
  */
-module.exports = file => () => import('./packages/' + file + '/docs/index.vue');
+module.exports = file => () => import('./packages/' + file + '/docs/Button.vue');
 
