@@ -16,7 +16,9 @@
     "build:style-entry": "node build/create-style/create-style-entry.js",
     "build:components-entry": "node build/entry/create-components-entry.js",
     "del:components-entry": "node build/entry/del-components-entry.js",
-    "build:copy": "gulp --gulpfile ./build/build-copy.js"
+    "rename:components": "node build/entry/rename-components.js",
+    "build:copy": "gulp --gulpfile ./build/copy/build-copy.js"
+
   },
   "dependencies": {
     "@babel/runtime": "^7.2.0",
