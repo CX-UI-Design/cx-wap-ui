@@ -15,7 +15,7 @@ const tasks = [
   'build:style',
   'build:style-entry',
   'build:vant',
-  // 'build:copy'
+  'build:copy'
 ];
 
 tasks.forEach(task => {
