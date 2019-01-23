@@ -5,7 +5,15 @@
             :center="center" :arrowDirection="arrowDirection" :titleClass="titleClass" :valueClass="valueClass"
             :labelClass="labelClass" @click="cell_click"
   >
-    <slot></slot>
+    <template slot="title">
+      <slot name="title"></slot>
+    </template>
+    <template slot="icon">
+      <slot name="icon"></slot>
+    </template>
+    <template slot="right-icon">
+      <slot name="right-icon"></slot>
+    </template>
   </van-cell>
 </template>
 
